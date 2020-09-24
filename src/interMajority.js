@@ -21,16 +21,16 @@ prenom nom, vous êtes majeur, vous pouvez voter*/
 
 const isAdult = () => {
     //input prénom et vérification du type de l'argument
-    let firstName = readlineSync.question("Prénom j'vous prie: ")
+    let firstName = readlineSync.question("Prénom j'te prie: ")
     if (!isNaN(firstName)) {
         console.log(chalk.red(`Error, letters only.`))
         process.exit(1)
     }
 
     //input prénom et vérification du type de l'argument
-    let lastName = readlineSync.question("Nom j'vous prie: ")
+    let lastName = readlineSync.question("Nom j'te prie: ")
     if (!isNaN(lastName)) {
-        console.log(chalk.red(`Error, letters only.`))
+        console.log(chalk.red(`Error, letters only. (A l'américaine!)`))
         process.exit(1)
     }
 
@@ -38,17 +38,15 @@ const isAdult = () => {
     let stringAge = readlineSync.question("Age j'vous prie: ")
     let age = parseInt(stringAge)
     if (isNaN(age) && Int(age)) {
-        console.log(chalk.red(`{age} is not a number`))
+        console.log(chalk.red(`{age} is not a number. (Encore en ricain!)`))
         process.exit(1)
     }
 
     age >= byCountryMajority
         ? console.log(
-              chalk.green`${firtName} ${lastName} tu as${age}ans, vous êtes majeur, vous pouvez voter`
+              chalk.green`${firtName} ${lastName} tu as${age}ans, tu es majeur, tu peux voter`
           )
-        : console.log(
-              chalk.red`${age}ans fait que vous n'êtes pas prêt! Allez bisous `
-          )
+        : console.log(chalk.red`${age}ans trop peu! Allez bisous `)
 }
 
 const byCountryMajority = process.argv[2]
