@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync'
 import chalk from 'chalk'
 
-/* Un état vous demande d'ecrire un petit programme qui vérifit que les citoyens ont le droit de voter.
-Ecrivez un programme qui demande l'utilisateur son nom, son prenom, son age.
-Si l'âge est inférieur à 18 lui afficher avec le prenom et nom correspondant:
+/* Un état vous demande d'écrire un petit programme qui vérifie que les citoyens ont le droit de voter.
+Ecrivez un programme qui demande à l'utilisateur son nom, son prénom, son âge.
+Si l'âge est inférieur à 18 anslui afficher avec le prénom et nom correspondant:
 
 Désolé, prenom nom, vous êtes mineur, vous ne pouvez pas voter
 
@@ -35,7 +35,7 @@ const isAdult = () => {
 
     age >= 18
         ? console.log(
-              chalk.green`${firtName} ${lastName} tu as${age}ans, vous êtes majeur, welcome`
+              chalk.green`${firtName} ${lastName} tu as${age}ans, tu es majeur, tu peux voter`
           )
         : console.log(
               chalk.red`${age}ans fait que vous n'êtes pas prêt! Allez bisous `
